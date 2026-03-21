@@ -1,0 +1,8 @@
+<webscript>
+    <shortname>List deleted documents (trashcan)</shortname>
+    <description>Returns a JSON with property 'deleted' that lists documents currently in the trashcan (archive store) as "name (nodeRef)" strings.</description>
+    <url>/documents/deleted</url>
+    <format default="json">any</format>
+    <transaction>required</transaction>
+    <authentication>user</authentication>
+</webscript>

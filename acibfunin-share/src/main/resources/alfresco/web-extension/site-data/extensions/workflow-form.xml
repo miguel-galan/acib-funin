@@ -1,0 +1,15 @@
+<extension>
+    <modules>
+        <module>
+            <id>custom-workflow-form</id>
+            <version>1.0</version>
+            <auto-deploy>true</auto-deploy>
+            <customizations>
+                <customization>
+                    <targetPackageRoot>org.alfresco.components.workflow</targetPackageRoot>
+                    <sourcePackageRoot>com.acibfunin.components.workflow</sourcePackageRoot>
+                </customization>
+            </customizations>
+        </module>
+    </modules>
+</extension>

@@ -1,0 +1,7 @@
+<webscript>
+    <shortname>Get Workflow Task Info</shortname>
+    <description>Returns workflow task properties including custom fields</description>
+    <url>/task/info?taskId={taskId}</url>
+    <authentication>user</authentication>
+    <format default="json">extension</format>
+</webscript>

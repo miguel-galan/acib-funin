@@ -1,0 +1,7 @@
+<webscript>
+	<shortname>Get list of files approved in workflows</shortname>
+	<url>/tasks/files/approved</url>
+	<format default="json">any</format>
+	<transaction>required</transaction>
+	<authentication>user</authentication>
+</webscript>

@@ -1,0 +1,7 @@
+<webscript>
+    <shortname>Copy Content from Sibling</shortname>
+    <description>Copy binary content from 'documento-fuente' to target without versioning.</description>
+    <url>/com/acibfunin/content/copy</url>
+    <authentication>user</authentication>
+    <format default="json"/>
+</webscript>

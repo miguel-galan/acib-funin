@@ -1,0 +1,14 @@
+<extension>
+    <modules>
+        <module>
+            <id>Custom login</id>
+            <auto-deploy>true</auto-deploy>
+            <customizations>
+                <customization>
+                    <targetPackageRoot>org.alfresco.components</targetPackageRoot>
+                    <sourcePackageRoot>com.acibfunin.components</sourcePackageRoot>
+                </customization>
+            </customizations>
+        </module>
+    </modules>
+</extension>

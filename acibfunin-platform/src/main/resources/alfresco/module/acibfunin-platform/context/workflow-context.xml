@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="${project.artifactId}.workflowBootstrap" parent="workflowDeployer">
+        <property name="workflowDefinitions">
+            <list>
+                <props>
+                    <prop key="engineId">activiti</prop>
+                    <prop key="location">alfresco/module/${project.artifactId}/workflow/review.bpmn20.xml</prop>
+                    <prop key="mimetype">text/xml</prop>
+                    <prop key="redeploy">true</prop>
+                </props>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="taskCreateListener" class="com.acibfunin.listeners.ReviewTaskListener" depends-on="activitiBeanRegistry">
+        <property name="nodeService" ref="NodeService"/>
+        <property name="workflowService" ref="WorkflowService"/>
+        <property name="sysAdminParams" ref="sysAdminParams"/>
+        <property name="permissionService" ref="PermissionService"/>
+        <property name="versionService" ref="VersionService"/>
+        <property name="shareUrl" value="${task.share.url}"/>
+    </bean>
+
+    <!-- Registra el bean en el ActivitiBeanRegistry para que ${taskCreateListener} se resuelva y los servicios dentro del listener no sean nulos-->
+    <bean id="taskCreateListener.activitiBeanRegistry"
+          class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+          depends-on="activitiBeanRegistry">
+        <property name="targetObject" ref="activitiBeanRegistry"/>
+        <property name="targetMethod" value="put"/>
+        <property name="arguments">
+            <list>
+                <value>taskCreateListener</value>          <!-- nombre tal cual aparece en la expresión -->
+                <ref bean="taskCreateListener"/>           <!-- referencia al bean de Spring -->
+            </list>
+        </property>
+    </bean>
+</beans>

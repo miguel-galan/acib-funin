@@ -1,0 +1,11 @@
+.alfresco-guest .sticky-wrapper {
+    background-color: #ffffff !important;
+}
+
+.theme-company-logo {
+    background: url("images/logo2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    background-size: 250px auto !important;
+    height: 80px !important;
+    width: 300px !important;
+    align-items: center; !important;
+}
