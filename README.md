@@ -52,7 +52,7 @@ All the services of the project are now run as docker containers. The run script
 
 ### Share Overrides With Webscript Templates
 
-These are Share webscript template overrides used via extension modules:
+These are Share webscripts template, overrides used via extension modules:
 
 * `components/document-details/document-versions.get.html.ftl`: Injects custom JS/CSS for the version-removal button in Document Details.
 * `components/profile/userprofiletoolbar.get.js`: Adds a link to `approvedTasksList` in the user profile toolbar.
