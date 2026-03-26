@@ -44,11 +44,16 @@ All the services of the project are now run as docker containers. The run script
 * `GET /documents/deleted`: Returns archived documents from the trashcan, split into `replaced` and `deleted`, with original path and deletion date.
 * `POST /api/node/version/{store_type}/{store_id}/{id}`: Removes a specific version label from a node version history.
 * `POST /com/acibfunin/content/copy`: Copies binary content from sibling `documento-fuente` to a target node, creates a dated backup copy, and tries to avoid version auto-increment during replacement.
+* `POST /acibfunin/ldap/sync`: Triggers LDAP synchronization from Repository (admin-only) and returns status/summary/timestamps.
+* `GET /acibfunin/ldap/sync/config`: Returns relevant LDAP/synchronization configuration properties as JSON (admin-only).
 
 ### Share Component Webscripts (`acibfunin-share`)
 
 * `GET /components/approvedTasksList/body`: Controller/view for the custom Approved Tasks page body. It loads approved entries, normalizes task IDs, and enables user filtering controls for quality-control users.
 * `GET /components/workflow/workflow-form`: Customized workflow form component for task/workflow details and custom form rendering.
+* `GET /components/console/ldap-sync`: LDAP Sync admin page component in Share (sync action + LDAP properties panel).
+* `POST /acibfunin/api/ldap-sync`: Share proxy endpoint that forwards sync execution to Repository.
+* `GET /acibfunin/api/ldap-sync-config`: Share proxy endpoint that fetches LDAP/synchronization config from Repository.
 
 ### Share Overrides With Webscript Templates
 
