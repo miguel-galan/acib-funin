@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>LDAP Sync Configuration</shortname>
+  <description>List LDAP and synchronization settings</description>
+  <format default="json" />
+  <url>/acibfunin/ldap/sync/config</url>
+  <authentication>user</authentication>
+</webscript>

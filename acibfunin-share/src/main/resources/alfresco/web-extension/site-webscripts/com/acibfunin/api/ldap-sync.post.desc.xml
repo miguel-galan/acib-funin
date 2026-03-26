@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>LDAP Sync Proxy</shortname>
+  <description>Proxy LDAP synchronization requests from Share to Repository</description>
+  <format default="json" />
+  <url>/acibfunin/api/ldap-sync</url>
+  <authentication>user</authentication>
+</webscript>

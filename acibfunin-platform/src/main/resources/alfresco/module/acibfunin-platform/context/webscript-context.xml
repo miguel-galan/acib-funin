@@ -49,4 +49,19 @@
         <property name="copyService" ref="CopyService" />
     </bean>
 
+    <bean id="webscript.com.acibfunin.ldap-sync.post"
+          class="com.acibfunin.webscripts.LdapSyncWebScript"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry" />
+        <property name="userRegistrySynchronizer" ref="userRegistrySynchronizer" />
+        <property name="synchronizerStatus" ref="userRegistrySynchronizer" />
+    </bean>
+
+    <bean id="webscript.com.acibfunin.ldap-sync-config.get"
+          class="com.acibfunin.webscripts.LdapSyncConfigWebScript"
+          parent="webscript">
+        <property name="serviceRegistry" ref="ServiceRegistry" />
+        <property name="environment" ref="environment" />
+    </bean>
+
 </beans>

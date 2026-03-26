@@ -1,0 +1,6 @@
+<webscript>
+  <shortname>Admin Console LDAP Sync Tool</shortname>
+  <description>Administration Console - LDAP synchronization tool</description>
+  <url>/components/console/ldap-sync</url>
+  <family>admin-console</family>
+</webscript>

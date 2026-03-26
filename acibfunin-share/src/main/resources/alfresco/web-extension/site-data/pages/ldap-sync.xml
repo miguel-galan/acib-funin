@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>LDAP Sync</title>
+   <title-id>page.ldapSync.title</title-id>
+   <description>LDAP Sync Administration</description>
+   <description-id>page.ldapSync.description</description-id>
+   <template-instance>ldap-sync</template-instance>
+   <authentication>user</authentication>
+</page>

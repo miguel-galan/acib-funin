@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>LDAP Sync</shortname>
+  <description>Synchronize LDAP users and groups</description>
+  <format default="json" />
+  <url>/acibfunin/ldap/sync</url>
+  <authentication>user</authentication>
+</webscript>
